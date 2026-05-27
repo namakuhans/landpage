@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-bg-base overflow-hidden">
+    <div className="min-h-screen bg-[#0f1115] overflow-hidden">
       <HeroSection />
       <GallerySection />
       <EquipmentSection />
