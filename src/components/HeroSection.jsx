@@ -99,10 +99,10 @@ function HeroSection() {
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center justify-center font-black italic tracking-tighter text-white leading-[0.8] pointer-events-none drop-shadow-[0_15px_15px_rgba(0,0,0,0.9)] w-full px-4"
+          className="flex flex-col items-center justify-center font-black italic tracking-tighter text-white leading-[0.8] pointer-events-none w-full px-4"
           style={{ fontFamily: "'Tusker Grotesk', 'Anton', sans-serif", letterSpacing: '0.02em' }}
         >
-          <div className="flex w-full justify-center">
+          <div className="flex w-full justify-center relative z-30 drop-shadow-[0_15px_15px_rgba(0,0,0,0.95)]">
             <motion.span
               initial={{ opacity: 0, filter: "blur(20px)", x: -150, scale: 1.8 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
@@ -112,7 +112,7 @@ function HeroSection() {
               Welcome
             </motion.span>
           </div>
-          <div className="flex w-full justify-center">
+          <div className="flex w-full justify-center relative z-10 drop-shadow-[0_10px_10px_rgba(0,0,0,0.7)]">
             <motion.span
               initial={{ opacity: 0, filter: "blur(20px)", x: -100, scale: 1.8 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
@@ -122,7 +122,7 @@ function HeroSection() {
               To My
             </motion.span>
           </div>
-          <div className="flex w-full justify-center">
+          <div className="flex w-full justify-center relative z-20 drop-shadow-[0_15px_15px_rgba(0,0,0,0.95)]">
             <motion.span
               initial={{ opacity: 0, filter: "blur(20px)", x: 150, scale: 1.8 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
