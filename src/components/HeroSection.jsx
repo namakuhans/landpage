@@ -38,7 +38,7 @@ function HeroSection() {
             rotate: [0, 45, 45, 90, 90]
           }}
           transition={{ duration: 3, delay: 0.2, repeat: Infinity, times: [0, 0.3, 0.8, 0.95, 1], ease: "easeInOut" }}
-          className="absolute -top-12 -left-16 text-text-primary svg-shadow-block"
+          className="absolute -top-12 -left-16 text-hero-text svg-shadow-block"
         >
           <Sparkle fill="currentColor" size={48} />
         </motion.div>
@@ -51,7 +51,7 @@ function HeroSection() {
             rotate: [0, -30, -30, -60, -60]
           }}
           transition={{ duration: 4, delay: 1.1, repeat: Infinity, times: [0, 0.4, 0.85, 0.95, 1], ease: "easeInOut" }}
-          className="absolute top-8 -right-8 text-text-primary svg-shadow-block"
+          className="absolute top-8 -right-8 text-hero-text svg-shadow-block"
         >
           <Sparkle fill="currentColor" size={32} />
         </motion.div>
@@ -64,7 +64,7 @@ function HeroSection() {
             rotate: [0, 20, 20, 45, 45]
           }}
           transition={{ duration: 3.5, delay: 0.5, repeat: Infinity, times: [0, 0.35, 0.8, 0.95, 1], ease: "easeInOut" }}
-          className="absolute bottom-4 -left-20 text-text-primary svg-shadow-block"
+          className="absolute bottom-4 -left-20 text-hero-text svg-shadow-block"
         >
           <Sparkle fill="currentColor" size={56} />
         </motion.div>
@@ -77,7 +77,7 @@ function HeroSection() {
             rotate: [0, 60, 60, 120, 120]
           }}
           transition={{ duration: 2.5, delay: 1.8, repeat: Infinity, times: [0, 0.3, 0.75, 0.95, 1], ease: "easeInOut" }}
-          className="absolute -bottom-10 right-10 text-text-primary svg-shadow-block"
+          className="absolute -bottom-10 right-10 text-hero-text svg-shadow-block"
         >
           <Sparkle fill="currentColor" size={24} />
         </motion.div>
@@ -90,7 +90,7 @@ function HeroSection() {
             rotate: [0, -45, -45, -90, -90]
           }}
           transition={{ duration: 4.2, delay: 0.9, repeat: Infinity, times: [0, 0.35, 0.85, 0.95, 1], ease: "easeInOut" }}
-          className="absolute top-1/2 -right-24 text-text-primary svg-shadow-block"
+          className="absolute top-1/2 -right-24 text-hero-text svg-shadow-block"
         >
           <Sparkle fill="currentColor" size={40} />
         </motion.div>
@@ -99,8 +99,8 @@ function HeroSection() {
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center justify-center font-black italic tracking-tighter leading-[0.85] pointer-events-none w-full px-4"
-          style={{ fontFamily: "'Archivo Black', sans-serif", color: 'var(--theme-hero-text)' }}
+          className="flex flex-col items-center justify-center font-black italic tracking-tighter text-hero-text leading-[0.85] pointer-events-none w-full px-4"
+          style={{ fontFamily: "'Futura', 'Jost', sans-serif" }}
         >
           <div className="flex w-full justify-center">
             <motion.span
