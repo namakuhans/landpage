@@ -29,42 +29,67 @@ function HeroSection() {
         style={{ opacity, scale, y }}
         className="relative z-10 flex flex-col items-center justify-center -rotate-[8deg]"
       >
-        {/* Structured, Looping Sparkles */}
+        {/* Structured, Looping Sparkles - Bubble Pop Effect */}
         <motion.div
-          animate={{ scale: [0, 1.2, 0], opacity: [0, 1, 0], rotate: [0, 90, 180] }}
-          transition={{ duration: 3, delay: 0.2, repeat: Infinity, ease: "easeInOut" }}
+          animate={{
+            y: [50, -10, -10, -10, -10],
+            scale: [0, 1.2, 1.2, 2.5, 0],
+            opacity: [0, 1, 1, 0, 0],
+            rotate: [0, 45, 45, 90, 90]
+          }}
+          transition={{ duration: 3, delay: 0.2, repeat: Infinity, times: [0, 0.3, 0.8, 0.95, 1], ease: "easeInOut" }}
           className="absolute -top-12 -left-16 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={48} />
         </motion.div>
 
         <motion.div
-          animate={{ scale: [0, 1, 0], opacity: [0, 0.8, 0], rotate: [0, -90, -180] }}
-          transition={{ duration: 4, delay: 1.1, repeat: Infinity, ease: "easeInOut" }}
+          animate={{
+            y: [70, -5, -5, -5, -5],
+            scale: [0, 1, 1, 2.2, 0],
+            opacity: [0, 0.8, 0.8, 0, 0],
+            rotate: [0, -30, -30, -60, -60]
+          }}
+          transition={{ duration: 4, delay: 1.1, repeat: Infinity, times: [0, 0.4, 0.85, 0.95, 1], ease: "easeInOut" }}
           className="absolute top-8 -right-8 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={32} />
         </motion.div>
 
         <motion.div
-          animate={{ scale: [0, 1.5, 0], opacity: [0, 1, 0], rotate: [0, 45, 90] }}
-          transition={{ duration: 3.5, delay: 0.5, repeat: Infinity, ease: "easeInOut" }}
+          animate={{
+            y: [60, -15, -15, -15, -15],
+            scale: [0, 1.5, 1.5, 3, 0],
+            opacity: [0, 1, 1, 0, 0],
+            rotate: [0, 20, 20, 45, 45]
+          }}
+          transition={{ duration: 3.5, delay: 0.5, repeat: Infinity, times: [0, 0.35, 0.8, 0.95, 1], ease: "easeInOut" }}
           className="absolute bottom-4 -left-20 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={56} />
         </motion.div>
 
         <motion.div
-          animate={{ scale: [0, 0.8, 0], opacity: [0, 0.6, 0], rotate: [0, 180, 360] }}
-          transition={{ duration: 2.5, delay: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          animate={{
+            y: [40, -8, -8, -8, -8],
+            scale: [0, 0.8, 0.8, 1.8, 0],
+            opacity: [0, 0.6, 0.6, 0, 0],
+            rotate: [0, 60, 60, 120, 120]
+          }}
+          transition={{ duration: 2.5, delay: 1.8, repeat: Infinity, times: [0, 0.3, 0.75, 0.95, 1], ease: "easeInOut" }}
           className="absolute -bottom-10 right-10 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={24} />
         </motion.div>
 
         <motion.div
-          animate={{ scale: [0, 1.1, 0], opacity: [0, 0.9, 0], rotate: [0, -45, -90] }}
-          transition={{ duration: 4.2, delay: 0.9, repeat: Infinity, ease: "easeInOut" }}
+          animate={{
+            y: [80, -12, -12, -12, -12],
+            scale: [0, 1.1, 1.1, 2.4, 0],
+            opacity: [0, 0.9, 0.9, 0, 0],
+            rotate: [0, -45, -45, -90, -90]
+          }}
+          transition={{ duration: 4.2, delay: 0.9, repeat: Infinity, times: [0, 0.35, 0.85, 0.95, 1], ease: "easeInOut" }}
           className="absolute top-1/2 -right-24 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={40} />
@@ -107,20 +132,6 @@ function HeroSection() {
               LANDING PAGE
             </motion.span>
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.5 }}
-          className="mt-16 pointer-events-auto"
-        >
-          <button className="relative overflow-hidden group px-8 py-4 rounded-2xl bg-[#181b21] text-white font-black uppercase tracking-widest text-lg transition-all duration-300 shadow-[var(--shadow-skeuo)] hover:shadow-[var(--shadow-skeuo-inner)] active:scale-95">
-            <span className="relative z-10 flex items-center gap-2">
-              EXPLORE MY WORK
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </span>
-          </button>
         </motion.div>
       </motion.div>
     </section>
