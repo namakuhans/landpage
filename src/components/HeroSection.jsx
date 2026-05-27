@@ -139,16 +139,6 @@ function HeroSection() {
               </motion.span>
             </div>
           </motion.div>
-
-          {/* Call to action text below heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
-            className="mt-12 text-gray-400 font-sans tracking-widest uppercase text-sm md:text-base relative z-30"
-          >
-            LET'S START VISITING THIS PAGE!
-          </motion.div>
         </div>
       </motion.div>
     </section>
