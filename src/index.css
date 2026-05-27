@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -59,6 +59,8 @@
 
 @layer utilities {
   .text-shadow-block {
+    /* Bug fix: add text stroke so text doesn't blend with its own shadow */
+    -webkit-text-stroke: 3px var(--color-shadow-block);
     text-shadow:
       1px 1px 0px var(--color-shadow-block),
       2px 2px 0px var(--color-shadow-block),
@@ -83,15 +85,20 @@
   }
 
   .svg-shadow-block {
+    /* Using an initial multi-direction drop-shadow to act as a stroke for the SVG, then the extrusion */
     filter:
+      drop-shadow(2px 0px 0px var(--color-shadow-block))
+      drop-shadow(-2px 0px 0px var(--color-shadow-block))
+      drop-shadow(0px 2px 0px var(--color-shadow-block))
+      drop-shadow(0px -2px 0px var(--color-shadow-block))
       drop-shadow(1px 1px 0px var(--color-shadow-block))
-      drop-shadow(1px 1px 0px var(--color-shadow-block))
-      drop-shadow(1px 1px 0px var(--color-shadow-block))
-      drop-shadow(1px 1px 0px var(--color-shadow-block))
-      drop-shadow(1px 1px 0px var(--color-shadow-block))
-      drop-shadow(1px 1px 0px var(--color-shadow-block))
-      drop-shadow(1px 1px 0px var(--color-shadow-block))
-      drop-shadow(1px 1px 0px var(--color-shadow-block));
+      drop-shadow(2px 2px 0px var(--color-shadow-block))
+      drop-shadow(3px 3px 0px var(--color-shadow-block))
+      drop-shadow(4px 4px 0px var(--color-shadow-block))
+      drop-shadow(5px 5px 0px var(--color-shadow-block))
+      drop-shadow(6px 6px 0px var(--color-shadow-block))
+      drop-shadow(7px 7px 0px var(--color-shadow-block))
+      drop-shadow(8px 8px 0px var(--color-shadow-block));
   }
 }
 
