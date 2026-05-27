@@ -79,7 +79,7 @@ function HeroSection() {
         >
           <div className="flex w-full justify-center">
             <motion.span
-              initial={{ opacity: 0, filter: "blur(20px)", x: -150, scale: 1.8 }}
+              initial={{ opacity: 0, filter: "blur(20px)", x: -1000, scale: 1.2 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
               className="text-[4.5rem] sm:text-[7rem] md:text-[9rem] lg:text-[11.5rem] uppercase whitespace-nowrap text-center"
@@ -89,9 +89,9 @@ function HeroSection() {
           </div>
           <div className="flex w-full justify-center">
             <motion.span
-              initial={{ opacity: 0, filter: "blur(20px)", x: -100, scale: 1.8 }}
+              initial={{ opacity: 0, filter: "blur(20px)", x: 1000, scale: 1.2 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
-              transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 1.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="text-[6.5rem] sm:text-[10rem] md:text-[13rem] lg:text-[16rem] uppercase whitespace-nowrap text-center -mt-2 lg:-mt-6"
             >
               To My
@@ -99,9 +99,9 @@ function HeroSection() {
           </div>
           <div className="flex w-full justify-center">
             <motion.span
-              initial={{ opacity: 0, filter: "blur(20px)", x: 150, scale: 1.8 }}
+              initial={{ opacity: 0, filter: "blur(20px)", x: -1000, scale: 1.2 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
-              transition={{ duration: 1.5, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[7.2rem] uppercase whitespace-nowrap text-center -mt-1 lg:-mt-4"
             >
               Landing Page
