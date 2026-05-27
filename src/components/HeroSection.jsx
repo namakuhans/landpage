@@ -29,67 +29,87 @@ function HeroSection() {
         style={{ opacity, scale, y }}
         className="relative z-10 flex flex-col items-center justify-center -rotate-[8deg]"
       >
-        {/* Sparkles */}
+        {/* Structured, Looping Sparkles */}
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 0.8] }}
-          transition={{ delay: 0.8, duration: 0.5 }}
-          className="absolute -top-4 -left-12 text-white"
+          animate={{ scale: [0, 1.2, 0], opacity: [0, 1, 0], rotate: [0, 90, 180] }}
+          transition={{ duration: 3, delay: 0.2, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-12 -left-16 text-white"
+        >
+          <Sparkle fill="white" size={48} />
+        </motion.div>
+
+        <motion.div
+          animate={{ scale: [0, 1, 0], opacity: [0, 0.8, 0], rotate: [0, -90, -180] }}
+          transition={{ duration: 4, delay: 1.1, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-8 -right-8 text-white"
         >
           <Sparkle fill="white" size={32} />
         </motion.div>
 
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 0.8] }}
-          transition={{ delay: 1.1, duration: 0.5 }}
-          className="absolute top-2 right-4 text-white"
+          animate={{ scale: [0, 1.5, 0], opacity: [0, 1, 0], rotate: [0, 45, 90] }}
+          transition={{ duration: 3.5, delay: 0.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-4 -left-20 text-white"
+        >
+          <Sparkle fill="white" size={56} />
+        </motion.div>
+
+        <motion.div
+          animate={{ scale: [0, 0.8, 0], opacity: [0, 0.6, 0], rotate: [0, 180, 360] }}
+          transition={{ duration: 2.5, delay: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -bottom-10 right-10 text-white"
         >
           <Sparkle fill="white" size={24} />
         </motion.div>
 
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 0.8] }}
-          transition={{ delay: 1.0, duration: 0.5 }}
-          className="absolute bottom-2 -left-6 text-white"
+          animate={{ scale: [0, 1.1, 0], opacity: [0, 0.9, 0], rotate: [0, -45, -90] }}
+          transition={{ duration: 4.2, delay: 0.9, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 -right-24 text-white"
         >
           <Sparkle fill="white" size={40} />
         </motion.div>
 
-        {/* Text elements with motion blur simulation */}
-        <div className="flex flex-col items-center font-black italic tracking-tighter text-white leading-[0.85] pointer-events-none">
+        {/* Text elements with motion blur simulation and floating effect */}
+        <motion.div
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="flex flex-col items-center font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-200 to-gray-500 leading-[0.85] pointer-events-none drop-shadow-[0_10px_10px_rgba(0,0,0,0.8)]"
+        >
           <div className="flex gap-4">
             <motion.span
-              initial={{ opacity: 0, filter: "blur(20px)", x: -100, scale: 1.5 }}
+              initial={{ opacity: 0, filter: "blur(20px)", x: -150, scale: 1.8 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="text-6xl md:text-8xl lg:text-9xl uppercase"
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              className="text-7xl md:text-9xl lg:text-[10rem] uppercase drop-shadow-2xl"
+              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}
             >
               Welcome
             </motion.span>
           </div>
           <div className="flex gap-4">
             <motion.span
-              initial={{ opacity: 0, filter: "blur(20px)", x: -50, scale: 1.5 }}
+              initial={{ opacity: 0, filter: "blur(20px)", x: -100, scale: 1.8 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-5xl md:text-7xl lg:text-8xl uppercase ml-12"
+              transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="text-6xl md:text-8xl lg:text-9xl uppercase ml-12 drop-shadow-2xl"
+              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}
             >
               To My
             </motion.span>
           </div>
           <div className="flex gap-4">
             <motion.span
-              initial={{ opacity: 0, filter: "blur(20px)", x: 100, scale: 1.5 }}
+              initial={{ opacity: 0, filter: "blur(20px)", x: 150, scale: 1.8 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-6xl md:text-8xl lg:text-9xl uppercase"
+              transition={{ duration: 1.5, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="text-7xl md:text-9xl lg:text-[10rem] uppercase drop-shadow-2xl"
+              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}
             >
               Landing Page
             </motion.span>
           </div>
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
