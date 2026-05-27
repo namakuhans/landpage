@@ -11,7 +11,7 @@ function App() {
       <HeroSection />
 
       {/* Call to action text below Hero Section */}
-      <section className="relative w-full py-12 flex justify-center bg-[#0f1115] z-20">
+      <section className="relative w-full pt-12 pb-32 md:pb-48 flex justify-center bg-[#0f1115] z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
