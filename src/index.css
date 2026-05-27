@@ -12,6 +12,32 @@
   --shadow-skeuo-inner: inset 5px 5px 15px rgba(0, 0, 0, 0.4), inset -5px -5px 15px rgba(255, 255, 255, 0.05);
 }
 
+@layer utilities {
+  .text-shadow-block {
+    text-shadow:
+      1px 1px 0px #3b82f6,
+      2px 2px 0px #3b82f6,
+      3px 3px 0px #3b82f6,
+      4px 4px 0px #3b82f6,
+      5px 5px 0px #3b82f6,
+      6px 6px 0px #3b82f6,
+      7px 7px 0px #3b82f6,
+      8px 8px 0px #3b82f6,
+      9px 9px 0px #3b82f6,
+      10px 10px 0px #3b82f6,
+      11px 11px 0px #3b82f6,
+      12px 12px 0px #3b82f6,
+      13px 13px 0px #3b82f6,
+      14px 14px 0px #3b82f6,
+      15px 15px 0px #3b82f6,
+      16px 16px 0px #3b82f6,
+      17px 17px 0px #3b82f6,
+      18px 18px 0px #3b82f6,
+      19px 19px 0px #3b82f6,
+      20px 20px 0px #3b82f6;
+  }
+}
+
 @layer base {
   body {
     background-color: var(--color-bg-base);

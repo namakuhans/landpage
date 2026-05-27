@@ -74,7 +74,7 @@ function HeroSection() {
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center justify-center font-black italic tracking-tighter text-white leading-[0.8] pointer-events-none drop-shadow-[0_15px_15px_rgba(0,0,0,0.9)] w-full px-4"
+          className="flex flex-col items-center justify-center font-black italic tracking-tighter text-white leading-[0.85] pointer-events-none w-full px-4"
           style={{ fontFamily: "'Futura', 'Jost', sans-serif" }}
         >
           <div className="flex w-full justify-center">
@@ -82,7 +82,7 @@ function HeroSection() {
               initial={{ opacity: 0, filter: "blur(20px)", x: -1000, scale: 1.2 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[4.5rem] sm:text-[7rem] md:text-[9rem] lg:text-[11.5rem] uppercase whitespace-nowrap text-center"
+              className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] whitespace-nowrap text-center text-shadow-block"
             >
               Welcome
             </motion.span>
@@ -92,7 +92,7 @@ function HeroSection() {
               initial={{ opacity: 0, filter: "blur(20px)", x: 1000, scale: 1.2 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[6.5rem] sm:text-[10rem] md:text-[13rem] lg:text-[16rem] uppercase whitespace-nowrap text-center -mt-2 lg:-mt-6"
+              className="text-[5.5rem] sm:text-[8.5rem] md:text-[11rem] lg:text-[13rem] whitespace-nowrap text-center -mt-2 lg:-mt-4 text-shadow-block"
             >
               To My
             </motion.span>
@@ -102,7 +102,7 @@ function HeroSection() {
               initial={{ opacity: 0, filter: "blur(20px)", x: -1000, scale: 1.2 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[7.2rem] uppercase whitespace-nowrap text-center -mt-1 lg:-mt-4"
+              className="text-[2.2rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] whitespace-nowrap text-center -mt-1 lg:-mt-2 text-shadow-block"
             >
               Landing Page
             </motion.span>
