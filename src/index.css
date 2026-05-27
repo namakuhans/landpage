@@ -2,51 +2,96 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-base: #0f1115;
-  --color-bg-surface: #181b21;
-  --color-text-primary: #f0f0f0;
-  --color-text-secondary: #9ca3af;
-  --color-accent: #3b82f6;
+  --color-bg-base: var(--theme-bg-base);
+  --color-bg-surface: var(--theme-bg-surface);
+  --color-text-primary: var(--theme-text-primary);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-accent: var(--theme-accent);
+  --color-shadow-block: var(--theme-shadow-block);
 
-  --shadow-skeuo: 5px 5px 15px rgba(0, 0, 0, 0.4), -5px -5px 15px rgba(255, 255, 255, 0.05);
-  --shadow-skeuo-inner: inset 5px 5px 15px rgba(0, 0, 0, 0.4), inset -5px -5px 15px rgba(255, 255, 255, 0.05);
+  --shadow-skeuo: var(--theme-shadow-skeuo);
+  --shadow-skeuo-inner: var(--theme-shadow-skeuo-inner);
+}
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --theme-bg-base: #FFF7D3;
+    --theme-bg-surface: #F5EBB5;
+
+    /* Normal Text: Deep Rich Red */
+    --theme-text-primary: #AB1509;
+    --theme-text-secondary: #AB1509;
+    --theme-accent: #AB1509;
+
+    /* Hero Text & Sparkle Cutout Effect: Same as background */
+    --theme-hero-text: #FFF7D3;
+
+    /* 3D Shadow: Deep Rich Red */
+    --theme-shadow-block: #AB1509;
+
+    --theme-shadow-skeuo: 5px 5px 15px rgba(171, 21, 9, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    --theme-shadow-skeuo-inner: inset 5px 5px 15px rgba(171, 21, 9, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.8);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* Dark Mode */
+      --theme-bg-base: #1A0033;
+      --theme-bg-surface: #2A004D;
+
+      /* Normal Text: Orange Red */
+      --theme-text-primary: #FF4500;
+      --theme-text-secondary: #FF4500;
+      --theme-accent: #FF4500;
+
+      /* Hero Text & Sparkle Cutout Effect: Same as background */
+      --theme-hero-text: #1A0033;
+
+      /* 3D Shadow: Orange Red */
+      --theme-shadow-block: #FF4500;
+
+      --theme-shadow-skeuo: 5px 5px 15px rgba(0, 0, 0, 0.6), -5px -5px 15px rgba(255, 69, 0, 0.1);
+      --theme-shadow-skeuo-inner: inset 5px 5px 15px rgba(0, 0, 0, 0.6), inset -5px -5px 15px rgba(255, 69, 0, 0.1);
+    }
+  }
 }
 
 @layer utilities {
   .text-shadow-block {
     text-shadow:
-      1px 1px 0px #3b82f6,
-      2px 2px 0px #3b82f6,
-      3px 3px 0px #3b82f6,
-      4px 4px 0px #3b82f6,
-      5px 5px 0px #3b82f6,
-      6px 6px 0px #3b82f6,
-      7px 7px 0px #3b82f6,
-      8px 8px 0px #3b82f6,
-      9px 9px 0px #3b82f6,
-      10px 10px 0px #3b82f6,
-      11px 11px 0px #3b82f6,
-      12px 12px 0px #3b82f6,
-      13px 13px 0px #3b82f6,
-      14px 14px 0px #3b82f6,
-      15px 15px 0px #3b82f6,
-      16px 16px 0px #3b82f6,
-      17px 17px 0px #3b82f6,
-      18px 18px 0px #3b82f6,
-      19px 19px 0px #3b82f6,
-      20px 20px 0px #3b82f6;
+      1px 1px 0px var(--color-shadow-block),
+      2px 2px 0px var(--color-shadow-block),
+      3px 3px 0px var(--color-shadow-block),
+      4px 4px 0px var(--color-shadow-block),
+      5px 5px 0px var(--color-shadow-block),
+      6px 6px 0px var(--color-shadow-block),
+      7px 7px 0px var(--color-shadow-block),
+      8px 8px 0px var(--color-shadow-block),
+      9px 9px 0px var(--color-shadow-block),
+      10px 10px 0px var(--color-shadow-block),
+      11px 11px 0px var(--color-shadow-block),
+      12px 12px 0px var(--color-shadow-block),
+      13px 13px 0px var(--color-shadow-block),
+      14px 14px 0px var(--color-shadow-block),
+      15px 15px 0px var(--color-shadow-block),
+      16px 16px 0px var(--color-shadow-block),
+      17px 17px 0px var(--color-shadow-block),
+      18px 18px 0px var(--color-shadow-block),
+      19px 19px 0px var(--color-shadow-block),
+      20px 20px 0px var(--color-shadow-block);
   }
 
   .svg-shadow-block {
     filter:
-      drop-shadow(1px 1px 0px #3b82f6)
-      drop-shadow(1px 1px 0px #3b82f6)
-      drop-shadow(1px 1px 0px #3b82f6)
-      drop-shadow(1px 1px 0px #3b82f6)
-      drop-shadow(1px 1px 0px #3b82f6)
-      drop-shadow(1px 1px 0px #3b82f6)
-      drop-shadow(1px 1px 0px #3b82f6)
-      drop-shadow(1px 1px 0px #3b82f6);
+      drop-shadow(1px 1px 0px var(--color-shadow-block))
+      drop-shadow(1px 1px 0px var(--color-shadow-block))
+      drop-shadow(1px 1px 0px var(--color-shadow-block))
+      drop-shadow(1px 1px 0px var(--color-shadow-block))
+      drop-shadow(1px 1px 0px var(--color-shadow-block))
+      drop-shadow(1px 1px 0px var(--color-shadow-block))
+      drop-shadow(1px 1px 0px var(--color-shadow-block))
+      drop-shadow(1px 1px 0px var(--color-shadow-block));
   }
 }
 

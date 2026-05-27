@@ -20,10 +20,10 @@ function HeroSection() {
       className="relative h-screen flex flex-col items-center justify-center overflow-hidden"
     >
       {/* Background elements */}
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-[#0f1115] to-[#0f1115]"></div>
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/10 via-bg-base to-bg-base"></div>
 
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl"></div>
 
       <motion.div
         style={{ opacity, scale, y }}
@@ -38,9 +38,9 @@ function HeroSection() {
             rotate: [0, 45, 45, 90, 90]
           }}
           transition={{ duration: 3, delay: 0.2, repeat: Infinity, times: [0, 0.3, 0.8, 0.95, 1], ease: "easeInOut" }}
-          className="absolute -top-12 -left-16 text-white svg-shadow-block"
+          className="absolute -top-12 -left-16 text-hero-text svg-shadow-block"
         >
-          <Sparkle fill="white" size={48} />
+          <Sparkle fill="currentColor" size={48} />
         </motion.div>
 
         <motion.div
@@ -51,9 +51,9 @@ function HeroSection() {
             rotate: [0, -30, -30, -60, -60]
           }}
           transition={{ duration: 4, delay: 1.1, repeat: Infinity, times: [0, 0.4, 0.85, 0.95, 1], ease: "easeInOut" }}
-          className="absolute top-8 -right-8 text-white svg-shadow-block"
+          className="absolute top-8 -right-8 text-hero-text svg-shadow-block"
         >
-          <Sparkle fill="white" size={32} />
+          <Sparkle fill="currentColor" size={32} />
         </motion.div>
 
         <motion.div
@@ -64,9 +64,9 @@ function HeroSection() {
             rotate: [0, 20, 20, 45, 45]
           }}
           transition={{ duration: 3.5, delay: 0.5, repeat: Infinity, times: [0, 0.35, 0.8, 0.95, 1], ease: "easeInOut" }}
-          className="absolute bottom-4 -left-20 text-white svg-shadow-block"
+          className="absolute bottom-4 -left-20 text-hero-text svg-shadow-block"
         >
-          <Sparkle fill="white" size={56} />
+          <Sparkle fill="currentColor" size={56} />
         </motion.div>
 
         <motion.div
@@ -77,9 +77,9 @@ function HeroSection() {
             rotate: [0, 60, 60, 120, 120]
           }}
           transition={{ duration: 2.5, delay: 1.8, repeat: Infinity, times: [0, 0.3, 0.75, 0.95, 1], ease: "easeInOut" }}
-          className="absolute -bottom-10 right-10 text-white svg-shadow-block"
+          className="absolute -bottom-10 right-10 text-hero-text svg-shadow-block"
         >
-          <Sparkle fill="white" size={24} />
+          <Sparkle fill="currentColor" size={24} />
         </motion.div>
 
         <motion.div
@@ -90,16 +90,16 @@ function HeroSection() {
             rotate: [0, -45, -45, -90, -90]
           }}
           transition={{ duration: 4.2, delay: 0.9, repeat: Infinity, times: [0, 0.35, 0.85, 0.95, 1], ease: "easeInOut" }}
-          className="absolute top-1/2 -right-24 text-white svg-shadow-block"
+          className="absolute top-1/2 -right-24 text-hero-text svg-shadow-block"
         >
-          <Sparkle fill="white" size={40} />
+          <Sparkle fill="currentColor" size={40} />
         </motion.div>
 
         {/* Text elements with motion blur simulation and floating effect */}
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center justify-center font-black italic tracking-tighter text-white leading-[0.85] pointer-events-none w-full px-4"
+          className="flex flex-col items-center justify-center font-black italic tracking-tighter text-hero-text leading-[0.85] pointer-events-none w-full px-4"
           style={{ fontFamily: "'Futura', 'Jost', sans-serif" }}
         >
           <div className="flex w-full justify-center">

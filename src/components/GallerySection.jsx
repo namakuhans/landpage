@@ -33,14 +33,14 @@ const projects = [
 
 function GallerySection() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto relative z-20 bg-[#0f1115]">
+    <section className="py-24 px-6 max-w-7xl mx-auto relative z-20 bg-bg-base">
       <div className="mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-white mb-4"
+          className="text-4xl md:text-5xl font-bold text-accent mb-4"
         >
           Selected Works
         </motion.h2>
@@ -49,7 +49,7 @@ function GallerySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-gray-400 text-lg max-w-2xl"
+          className="text-text-secondary text-lg max-w-2xl"
         >
           A collection of my latest motion design and visual effects projects.
         </motion.p>
@@ -74,7 +74,7 @@ function GallerySection() {
             />
 
             <div className="absolute inset-0 z-20 flex flex-col justify-end p-8 opacity-90 group-hover:opacity-100 transition-opacity">
-              <span className="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">
+              <span className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">
                 {project.category}
               </span>
               <h3 className="text-2xl font-bold text-white translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
@@ -83,7 +83,7 @@ function GallerySection() {
             </div>
 
             {/* Skeuomorphic inner border highlight */}
-            <div className="absolute inset-0 rounded-3xl border border-white/10 z-30 pointer-events-none"></div>
+            <div className="absolute inset-0 rounded-3xl border border-white/20 z-30 pointer-events-none"></div>
           </motion.div>
         ))}
       </div>
