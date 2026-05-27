@@ -1,6 +1,11 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Sparkle } from 'lucide-react';
+
+const Sparkle = ({ size, fill, className }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill={fill} className={className} xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 0C12.5 10 14 11.5 24 12C14 12.5 12.5 14 12 24C11.5 14 10 12.5 0 12C10 11.5 11.5 10 12 0Z" />
+  </svg>
+);
 
 function HeroSection() {
   const containerRef = useRef(null);
