@@ -36,6 +36,18 @@
       19px 19px 0px #3b82f6,
       20px 20px 0px #3b82f6;
   }
+
+  .svg-shadow-block {
+    filter:
+      drop-shadow(1px 1px 0px #3b82f6)
+      drop-shadow(1px 1px 0px #3b82f6)
+      drop-shadow(1px 1px 0px #3b82f6)
+      drop-shadow(1px 1px 0px #3b82f6)
+      drop-shadow(1px 1px 0px #3b82f6)
+      drop-shadow(1px 1px 0px #3b82f6)
+      drop-shadow(1px 1px 0px #3b82f6)
+      drop-shadow(1px 1px 0px #3b82f6);
+  }
 }
 
 @layer base {

@@ -33,7 +33,7 @@ function HeroSection() {
         <motion.div
           animate={{ scale: [0, 1.2, 0], opacity: [0, 1, 0], rotate: [0, 90, 180] }}
           transition={{ duration: 3, delay: 0.2, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-12 -left-16 text-white"
+          className="absolute -top-12 -left-16 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={48} />
         </motion.div>
@@ -41,7 +41,7 @@ function HeroSection() {
         <motion.div
           animate={{ scale: [0, 1, 0], opacity: [0, 0.8, 0], rotate: [0, -90, -180] }}
           transition={{ duration: 4, delay: 1.1, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-8 -right-8 text-white"
+          className="absolute top-8 -right-8 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={32} />
         </motion.div>
@@ -49,7 +49,7 @@ function HeroSection() {
         <motion.div
           animate={{ scale: [0, 1.5, 0], opacity: [0, 1, 0], rotate: [0, 45, 90] }}
           transition={{ duration: 3.5, delay: 0.5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-4 -left-20 text-white"
+          className="absolute bottom-4 -left-20 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={56} />
         </motion.div>
@@ -57,7 +57,7 @@ function HeroSection() {
         <motion.div
           animate={{ scale: [0, 0.8, 0], opacity: [0, 0.6, 0], rotate: [0, 180, 360] }}
           transition={{ duration: 2.5, delay: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -bottom-10 right-10 text-white"
+          className="absolute -bottom-10 right-10 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={24} />
         </motion.div>
@@ -65,7 +65,7 @@ function HeroSection() {
         <motion.div
           animate={{ scale: [0, 1.1, 0], opacity: [0, 0.9, 0], rotate: [0, -45, -90] }}
           transition={{ duration: 4.2, delay: 0.9, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/2 -right-24 text-white"
+          className="absolute top-1/2 -right-24 text-white svg-shadow-block"
         >
           <Sparkle fill="white" size={40} />
         </motion.div>
@@ -82,9 +82,9 @@ function HeroSection() {
               initial={{ opacity: 0, filter: "blur(20px)", x: -1000, scale: 1.2 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] whitespace-nowrap text-center text-shadow-block"
+              className="text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] uppercase whitespace-nowrap text-center text-shadow-block"
             >
-              Welcome
+              WELCOME
             </motion.span>
           </div>
           <div className="flex w-full justify-center">
@@ -92,9 +92,9 @@ function HeroSection() {
               initial={{ opacity: 0, filter: "blur(20px)", x: 1000, scale: 1.2 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[5.5rem] sm:text-[8.5rem] md:text-[11rem] lg:text-[13rem] whitespace-nowrap text-center -mt-2 lg:-mt-4 text-shadow-block"
+              className="text-[5.5rem] sm:text-[8.5rem] md:text-[11rem] lg:text-[13rem] uppercase whitespace-nowrap text-center -mt-2 lg:-mt-4 text-shadow-block"
             >
-              To My
+              TO MY
             </motion.span>
           </div>
           <div className="flex w-full justify-center">
@@ -102,9 +102,9 @@ function HeroSection() {
               initial={{ opacity: 0, filter: "blur(20px)", x: -1000, scale: 1.2 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[2.2rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] whitespace-nowrap text-center -mt-1 lg:-mt-2 text-shadow-block"
+              className="text-[2.2rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] uppercase whitespace-nowrap text-center -mt-1 lg:-mt-2 text-shadow-block"
             >
-              Landing Page
+              LANDING PAGE
             </motion.span>
           </div>
         </motion.div>
@@ -115,9 +115,9 @@ function HeroSection() {
           transition={{ duration: 0.8, delay: 1.5 }}
           className="mt-16 pointer-events-auto"
         >
-          <button className="relative overflow-hidden group px-8 py-4 rounded-2xl bg-[#181b21] text-white font-medium text-lg transition-all duration-300 shadow-[var(--shadow-skeuo)] hover:shadow-[var(--shadow-skeuo-inner)] active:scale-95">
+          <button className="relative overflow-hidden group px-8 py-4 rounded-2xl bg-[#181b21] text-white font-black uppercase tracking-widest text-lg transition-all duration-300 shadow-[var(--shadow-skeuo)] hover:shadow-[var(--shadow-skeuo-inner)] active:scale-95">
             <span className="relative z-10 flex items-center gap-2">
-              Explore My Work
+              EXPLORE MY WORK
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </span>
           </button>
