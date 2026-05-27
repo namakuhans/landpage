@@ -113,7 +113,7 @@ function HeroSection() {
                 Welcome
               </motion.span>
             </div>
-            <div className="flex w-full justify-center relative z-10 drop-shadow-[0_10px_10px_rgba(0,0,0,0.7)]">
+            <div className="flex w-full justify-center relative z-10 drop-shadow-[0_10px_10px_rgba(0,0,0,0.7)] -translate-x-6 md:-translate-x-10 lg:-translate-x-12">
               <motion.span
                 initial={{ opacity: 0, filter: "blur(20px)", x: -100, scale: 1.8 }}
                 animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
@@ -123,7 +123,7 @@ function HeroSection() {
                 To My
               </motion.span>
             </div>
-            <div className="flex w-full justify-center relative z-20 drop-shadow-[0_15px_15px_rgba(0,0,0,0.95)]">
+            <div className="flex w-full justify-center relative z-20 drop-shadow-[0_15px_15px_rgba(0,0,0,0.95)] -translate-x-6 md:-translate-x-10 lg:-translate-x-12">
               <motion.span
                 initial={{ opacity: 0, filter: "blur(20px)", x: 150, scale: 1.8 }}
                 animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
