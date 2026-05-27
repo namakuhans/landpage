@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Sparkle } from 'lucide-react';
 
 function HeroSection() {
   const containerRef = useRef(null);
@@ -26,41 +27,75 @@ function HeroSection() {
 
       <motion.div
         style={{ opacity, scale, y }}
-        className="relative z-10 text-center px-6 max-w-5xl mx-auto"
+        className="relative z-10 flex flex-col items-center justify-center -rotate-[8deg]"
       >
+        {/* Sparkles */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 0.8] }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+          className="absolute -top-4 -left-12 text-white"
         >
-          <span className="inline-block py-1 px-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-sm text-gray-300 mb-6 shadow-[var(--shadow-skeuo)]">
-            Motion Graphics & GFX Artist
-          </span>
+          <Sparkle fill="white" size={32} />
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 mb-6"
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 0.8] }}
+          transition={{ delay: 1.1, duration: 0.5 }}
+          className="absolute top-2 right-4 text-white"
         >
-          Visualizing<br />The Impossible.
-        </motion.h1>
+          <Sparkle fill="white" size={24} />
+        </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10"
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: [0, 1.2, 1], opacity: [0, 1, 0.8] }}
+          transition={{ delay: 1.0, duration: 0.5 }}
+          className="absolute bottom-2 -left-6 text-white"
         >
-          Creating stunning motion graphics and visual effects with a modern touch.
-          Every pixel crafted with precision.
-        </motion.p>
+          <Sparkle fill="white" size={40} />
+        </motion.div>
+
+        {/* Text elements with motion blur simulation */}
+        <div className="flex flex-col items-center font-black italic tracking-tighter text-white leading-[0.85] pointer-events-none">
+          <div className="flex gap-4">
+            <motion.span
+              initial={{ opacity: 0, filter: "blur(20px)", x: -100, scale: 1.5 }}
+              animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="text-6xl md:text-8xl lg:text-9xl uppercase"
+            >
+              Welcome
+            </motion.span>
+          </div>
+          <div className="flex gap-4">
+            <motion.span
+              initial={{ opacity: 0, filter: "blur(20px)", x: -50, scale: 1.5 }}
+              animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="text-5xl md:text-7xl lg:text-8xl uppercase ml-12"
+            >
+              To My
+            </motion.span>
+          </div>
+          <div className="flex gap-4">
+            <motion.span
+              initial={{ opacity: 0, filter: "blur(20px)", x: 100, scale: 1.5 }}
+              animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="text-6xl md:text-8xl lg:text-9xl uppercase"
+            >
+              Landing Page
+            </motion.span>
+          </div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
+          className="mt-16 pointer-events-auto"
         >
           <button className="relative overflow-hidden group px-8 py-4 rounded-2xl bg-[#181b21] text-white font-medium text-lg transition-all duration-300 shadow-[var(--shadow-skeuo)] hover:shadow-[var(--shadow-skeuo-inner)] active:scale-95">
             <span className="relative z-10 flex items-center gap-2">
