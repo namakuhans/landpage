@@ -75,6 +75,7 @@ function HeroSection() {
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center font-black italic tracking-tighter text-white leading-none pointer-events-none drop-shadow-[0_15px_15px_rgba(0,0,0,0.9)] w-full px-4"
+          style={{ fontFamily: "'Futura', 'Jost', sans-serif" }}
         >
           <div className="flex gap-4">
             <motion.span
