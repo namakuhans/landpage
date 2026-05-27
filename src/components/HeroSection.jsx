@@ -74,15 +74,14 @@ function HeroSection() {
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-gray-200 to-gray-500 leading-[0.85] pointer-events-none drop-shadow-[0_10px_10px_rgba(0,0,0,0.8)]"
+          className="flex flex-col items-center font-black italic tracking-tighter text-white leading-none pointer-events-none drop-shadow-[0_15px_15px_rgba(0,0,0,0.9)] w-full px-4"
         >
           <div className="flex gap-4">
             <motion.span
               initial={{ opacity: 0, filter: "blur(20px)", x: -150, scale: 1.8 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-              className="text-7xl md:text-9xl lg:text-[10rem] uppercase drop-shadow-2xl"
-              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}
+              className="text-7xl md:text-9xl lg:text-[10rem] uppercase"
             >
               Welcome
             </motion.span>
@@ -92,8 +91,7 @@ function HeroSection() {
               initial={{ opacity: 0, filter: "blur(20px)", x: -100, scale: 1.8 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="text-6xl md:text-8xl lg:text-9xl uppercase ml-12 drop-shadow-2xl"
-              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}
+              className="text-6xl md:text-8xl lg:text-9xl uppercase ml-12"
             >
               To My
             </motion.span>
@@ -103,8 +101,7 @@ function HeroSection() {
               initial={{ opacity: 0, filter: "blur(20px)", x: 150, scale: 1.8 }}
               animate={{ opacity: 1, filter: "blur(0px)", x: 0, scale: 1 }}
               transition={{ duration: 1.5, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="text-7xl md:text-9xl lg:text-[10rem] uppercase drop-shadow-2xl"
-              style={{ WebkitTextStroke: "1px rgba(255,255,255,0.1)" }}
+              className="text-7xl md:text-9xl lg:text-[10rem] uppercase"
             >
               Landing Page
             </motion.span>
