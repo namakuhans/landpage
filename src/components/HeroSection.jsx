@@ -99,8 +99,8 @@ function HeroSection() {
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center justify-center font-black italic tracking-tighter text-text-primary leading-[0.85] pointer-events-none w-full px-4"
-          style={{ fontFamily: "'Futura', 'Jost', sans-serif" }}
+          className="flex flex-col items-center justify-center font-black italic tracking-tighter leading-[0.85] pointer-events-none w-full px-4"
+          style={{ fontFamily: "'Archivo Black', sans-serif", color: 'var(--theme-hero-text)' }}
         >
           <div className="flex w-full justify-center">
             <motion.span

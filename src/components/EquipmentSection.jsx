@@ -37,7 +37,7 @@ function EquipmentSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-text-primary mb-4"
+          className="text-4xl md:text-5xl font-bold text-accent mb-4"
         >
           My Arsenal
         </motion.h2>
@@ -70,7 +70,7 @@ function EquipmentSection() {
             <div className="mb-6 inline-flex p-4 rounded-2xl bg-bg-base shadow-[inset_2px_2px_5px_rgba(0,0,0,0.2)] border border-white/10 group-hover:scale-110 transition-transform duration-300">
               {item.icon}
             </div>
-            <h3 className="text-xl font-bold text-text-primary mb-2">{item.name}</h3>
+            <h3 className="text-xl font-bold text-accent mb-2">{item.name}</h3>
             <p className="text-text-secondary text-sm">{item.specs}</p>
           </motion.div>
         ))}

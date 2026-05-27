@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -22,6 +22,7 @@
     --theme-text-secondary: #7A0F06;
     --theme-accent: #AB1509;
     --theme-shadow-block: #7A0F06;
+    --theme-hero-text: #FFF7D3; /* Cutout effect for hero text */
 
     --theme-shadow-skeuo: 5px 5px 15px rgba(171, 21, 9, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.8);
     --theme-shadow-skeuo-inner: inset 5px 5px 15px rgba(171, 21, 9, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.8);
@@ -36,6 +37,7 @@
       --theme-text-secondary: #FFB347; /* Soft orange/yellow for muted text */
       --theme-accent: #00FF00; /* Real Fresh Green */
       --theme-shadow-block: #00FF00;
+      --theme-hero-text: #1A0033; /* Cutout effect for hero text */
 
       --theme-shadow-skeuo: 5px 5px 15px rgba(0, 0, 0, 0.6), -5px -5px 15px rgba(0, 255, 0, 0.1);
       --theme-shadow-skeuo-inner: inset 5px 5px 15px rgba(0, 0, 0, 0.6), inset -5px -5px 15px rgba(0, 255, 0, 0.1);

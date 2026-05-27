@@ -40,7 +40,7 @@ function GallerySection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-text-primary mb-4"
+          className="text-4xl md:text-5xl font-bold text-accent mb-4"
         >
           Selected Works
         </motion.h2>
