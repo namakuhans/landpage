@@ -1,5 +1,5 @@
 import HeroSection from './components/HeroSection';
-import CurvedMarquee from './components/CurvedMarquee';
+import CurvedLoop from './components/CurvedLoop';
 import GallerySection from './components/GallerySection';
 import EquipmentSection from './components/EquipmentSection';
 import Footer from './components/Footer';
@@ -24,7 +24,13 @@ function App() {
         </motion.div>
       </section>
 
-      <CurvedMarquee />
+      <CurvedLoop
+        marqueeText="BRINGING VISUAL TO LIVE ✦ DYNAMIC DESIGNS, SEAMLESS MOTION ✦ ART THAT SPEAKS ✦"
+        speed={5}
+        curveAmount={250}
+        direction="left"
+        interactive
+      />
 
       <GallerySection />
       <EquipmentSection />
