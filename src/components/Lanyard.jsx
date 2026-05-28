@@ -83,8 +83,11 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
   const { nodes, materials } = useGLTF(cardGLB);
   const texture = useTexture(lanyard);
   const [curve] = useState(
-    () =>
-      new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()])
+    () => {
+      const c = new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]);
+      c.curveType = 'chordal';
+      return c;
+    }
   );
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
@@ -103,6 +106,11 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
       return () => void (document.body.style.cursor = 'auto');
     }
   }, [hovered, dragged]);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/immutability
+    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  }, [texture]);
 
   useFrame((state, delta) => {
     if (dragged) {
@@ -132,8 +140,8 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
     }
   });
 
-  curve.curveType = 'chordal';
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+
+
 
   return (
     <>

@@ -1,0 +1,25 @@
+--- /app/src/components/Lanyard.jsx
++++ /app/src/components/Lanyard.jsx
+@@ -84,7 +84,11 @@
+   const texture = useTexture(lanyard);
+   const [curve] = useState(
+-    () =>
+-      new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()])
++    () => {
++      const c = new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]);
++      c.curveType = 'chordal';
++      return c;
++    }
+   );
+   const [dragged, drag] = useState(false);
+   const [hovered, hover] = useState(false);
+@@ -104,6 +108,10 @@
+     }
+   }, [hovered, dragged]);
+
++  useEffect(() => {
++    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
++  }, [texture]);
++
+   useFrame((state, delta) => {
+     if (dragged) {
