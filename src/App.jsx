@@ -1,4 +1,5 @@
 import HeroSection from './components/HeroSection';
+import CurvedMarquee from './components/CurvedMarquee';
 import GallerySection from './components/GallerySection';
 import EquipmentSection from './components/EquipmentSection';
 import Footer from './components/Footer';
@@ -11,7 +12,7 @@ function App() {
       <HeroSection />
 
       {/* Call to action text below Hero Section */}
-      <section className="relative w-full pt-12 pb-32 md:pb-48 flex justify-center bg-[#0f1115] z-20">
+      <section className="relative w-full pt-12 pb-16 flex justify-center bg-[#0f1115] z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,6 +23,8 @@ function App() {
           LET'S START VISITING THIS PAGE!
         </motion.div>
       </section>
+
+      <CurvedMarquee />
 
       <GallerySection />
       <EquipmentSection />
