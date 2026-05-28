@@ -25,6 +25,14 @@ function App() {
         </motion.div>
       </section>
 
+      <CurvedLoop
+        marqueeText="BRINGING VISUAL TO LIVE ✦ DYNAMIC DESIGNS, SEAMLESS MOTION ✦ ART THAT SPEAKS ✦"
+        speed={5}
+        curveAmount={-250}
+        direction="right"
+        interactive
+      />
+
       <AboutSection />
 
       <CurvedLoop
