@@ -116,14 +116,14 @@ const CurvedLoop = ({
         className="select-none w-[250%] md:w-full max-w-none overflow-visible block aspect-[100/12] text-[60px] md:text-[80px] font-bold uppercase leading-none"
         viewBox="0 0 1440 120"
       >
-        <text ref={measureRef} xmlSpace="preserve" style={{ visibility: 'hidden', opacity: 0, pointerEvents: 'none' }}>
+        <text ref={measureRef} xmlSpace="preserve" style={{ visibility: 'hidden', opacity: 0, pointerEvents: 'none', fontFamily: "'Tusker Grotesk', 'Anton', sans-serif" }}>
           {text}
         </text>
         <defs>
           <path ref={pathRef} id={pathId} d={pathD} fill="none" stroke="transparent" />
         </defs>
         {ready && (
-          <text xmlSpace="preserve" className={`fill-white/90 ${className ?? ''}`} style={{ letterSpacing: '0.05em' }}>
+          <text xmlSpace="preserve" className={`fill-white/90 ${className ?? ''}`} style={{ letterSpacing: '0.05em', fontFamily: "'Tusker Grotesk', 'Anton', sans-serif" }}>
             <textPath ref={textPathRef} href={`#${pathId}`} startOffset={offset + 'px'} xmlSpace="preserve">
               {totalText}
             </textPath>
