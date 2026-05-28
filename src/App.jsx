@@ -40,7 +40,29 @@ function App() {
 
       <AboutSection />
 
-      <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+      <section className="relative w-full py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-[#0f1115] overflow-hidden flex flex-col md:flex-row items-center max-w-7xl mx-auto gap-8">
+        <div className="w-full md:w-1/2 flex justify-center order-1 md:order-1 relative z-10 h-[70vh] md:h-[80vh]">
+          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+        </div>
+        <div className="w-full md:w-1/2 flex flex-col justify-center text-left order-2 md:order-2">
+          <motion.div
+             initial={{ opacity: 0, x: 50 }}
+             whileInView={{ opacity: 1, x: 0 }}
+             transition={{ duration: 0.8, ease: "easeOut" }}
+             viewport={{ once: true, margin: "-100px" }}
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+              Interactive 3D Asset
+            </h2>
+            <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-6 font-light">
+              This interactive lanyard experience is built entirely using <span className="text-[#3b82f6] font-semibold drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Three.js</span> and React Three Fiber.
+            </p>
+            <p className="text-gray-400 text-lg md:text-xl leading-relaxed font-light">
+              The card features a custom <span className="text-[#8b5cf6] font-semibold drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]">GFX</span> texture, while the physical strap's detailed texture was fully designed and crafted using the <span className="text-[#ec4899] font-semibold drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]">Alight Motion</span> application.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       <CurvedLoop
         marqueeText="BRINGING VISUAL TO LIVE ✦ DYNAMIC DESIGNS, SEAMLESS MOTION ✦ ART THAT SPEAKS ✦"
