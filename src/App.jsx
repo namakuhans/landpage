@@ -25,6 +25,9 @@ function App() {
         </motion.div>
       </section>
 
+      {/* Spacer between CTA and CurvedLoop */}
+      <div className="h-[384px] md:h-[512px] lg:h-[640px] w-full"></div>
+
       <CurvedLoop
         marqueeText="BRINGING VISUAL TO LIVE ✦ DYNAMIC DESIGNS, SEAMLESS MOTION ✦ ART THAT SPEAKS ✦"
         speed={5}
@@ -44,12 +47,12 @@ function App() {
       />
 
       {/* Spacer between About and Gallery */}
-      <div className="h-48 md:h-64 lg:h-80 w-full"></div>
+      <div className="h-[384px] md:h-[512px] lg:h-[640px] w-full"></div>
 
       <GallerySection />
 
       {/* Spacer between Gallery and Equipment */}
-      <div className="h-48 md:h-64 lg:h-80 w-full"></div>
+      <div className="h-[384px] md:h-[512px] lg:h-[640px] w-full"></div>
 
       <EquipmentSection />
       <Footer />
