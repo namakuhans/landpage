@@ -20,8 +20,8 @@ const CurvedLoop = ({
   const [offset, setOffset] = useState(0);
   const uid = useId();
   const pathId = `curve-${uid}`;
-  // Adjust base Y to make room for negative curve (upward)
-  const baseY = curveAmount < 0 ? Math.abs(curveAmount) + 40 : 40;
+  // Center the visual bounding box of the curve and text in the viewBox
+  const baseY = 100 - curveAmount / 4;
   const pathD = `M-100,${baseY} Q500,${baseY + curveAmount} 1540,${baseY}`;
 
   const dragRef = useRef(false);
