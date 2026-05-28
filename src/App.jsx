@@ -1,6 +1,7 @@
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import CurvedLoop from './components/CurvedLoop';
+import Lanyard from './components/Lanyard';
 import GallerySection from './components/GallerySection';
 import EquipmentSection from './components/EquipmentSection';
 import Footer from './components/Footer';
@@ -38,6 +39,8 @@ function App() {
       />
 
       <AboutSection />
+
+      <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
 
       <CurvedLoop
         marqueeText="BRINGING VISUAL TO LIVE ✦ DYNAMIC DESIGNS, SEAMLESS MOTION ✦ ART THAT SPEAKS ✦"
