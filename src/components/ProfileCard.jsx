@@ -412,7 +412,7 @@ const ProfileCardComponent = ({
   return (
     <div
       ref={wrapRef}
-      className={`relative touch-none ${className}`.trim()}
+      className={`relative ${className}`.trim()}
       style={{ perspective: '500px', transform: 'translate3d(0, 0, 0.1px)', ...cardStyle }}
     >
       {behindGlowEnabled && (
