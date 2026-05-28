@@ -1,4 +1,5 @@
 import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
 import CurvedLoop from './components/CurvedLoop';
 import GallerySection from './components/GallerySection';
 import EquipmentSection from './components/EquipmentSection';
@@ -23,6 +24,8 @@ function App() {
           LET'S START VISITING THIS PAGE!
         </motion.div>
       </section>
+
+      <AboutSection />
 
       <CurvedLoop
         marqueeText="BRINGING VISUAL TO LIVE ✦ DYNAMIC DESIGNS, SEAMLESS MOTION ✦ ART THAT SPEAKS ✦"
