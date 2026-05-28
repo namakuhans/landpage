@@ -55,16 +55,16 @@ const AboutSection = () => {
             </motion.div>
           </div>
 
-          <div className="block md:hidden w-full flex justify-center">
+          <div className="flex md:hidden w-full justify-center items-center">
             <motion.div
                initial={{ opacity: 0, y: 100 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.8, ease: "easeOut" }}
                viewport={{ once: true, margin: "-100px" }}
-               className="w-full flex justify-center"
+               className="w-full flex justify-center items-center"
             >
                <ProfileCard
-                className="mx-auto"
+                className="mx-auto w-fit"
                 name="A. Farhan M."
                 title="Mograph Editor"
                 handle="iHannsy"
