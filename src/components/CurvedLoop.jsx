@@ -114,7 +114,7 @@ const CurvedLoop = ({
     >
       <svg
         className="select-none w-[250%] md:w-full max-w-none overflow-visible block aspect-[100/12] text-[60px] md:text-[80px] font-bold uppercase leading-none"
-        viewBox={`0 0 1440 ${curveAmount < 0 ? Math.abs(curveAmount) + 120 : 120}`}
+        viewBox="0 0 1440 120"
       >
         <text ref={measureRef} xmlSpace="preserve" style={{ visibility: 'hidden', opacity: 0, pointerEvents: 'none' }}>
           {text}
