@@ -20,6 +20,7 @@ function App() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-gray-400 tracking-widest uppercase text-sm md:text-base text-center px-4"
+          style={{ fontFamily: "'Tusker Grotesk', 'Anton', sans-serif" }}
         >
           LET'S START VISITING THIS PAGE!
         </motion.div>
