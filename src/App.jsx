@@ -43,7 +43,14 @@ function App() {
         interactive
       />
 
+      {/* Spacer between About and Gallery */}
+      <div className="h-48 md:h-64 lg:h-80 w-full"></div>
+
       <GallerySection />
+
+      {/* Spacer between Gallery and Equipment */}
+      <div className="h-48 md:h-64 lg:h-80 w-full"></div>
+
       <EquipmentSection />
       <Footer />
     </div>
