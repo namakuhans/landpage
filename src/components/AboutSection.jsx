@@ -50,7 +50,7 @@ const AboutSection = () => {
                 enableMobileTilt
                 behindGlowColor="rgba(125, 190, 255, 0.67)"
                 behindGlowEnabled
-                innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+                innerGradient="linear-gradient(145deg,#2e20388c 0%,#18548244 100%)"
               />
             </motion.div>
           </div>
@@ -74,7 +74,7 @@ const AboutSection = () => {
                 enableMobileTilt
                 behindGlowColor="rgba(125, 190, 255, 0.67)"
                 behindGlowEnabled
-                innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+                innerGradient="linear-gradient(145deg,#2e20388c 0%,#18548244 100%)"
               />
             </motion.div>
           </div>
