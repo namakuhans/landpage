@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useAnimationFrame } from 'framer-motion';
 
 export default function CurvedMarquee() {
@@ -36,24 +36,23 @@ export default function CurvedMarquee() {
     setOffset((prev) => {
       const move = speed * (delta / 16.66);
       let newOffset = prev - move;
-      // Use modulo for perfectly continuous seamless looping without glitches
       if (newOffset <= -textWidth) {
-        newOffset = newOffset % textWidth;
+        newOffset += textWidth;
       }
       return newOffset;
     });
   });
 
   if (!width) {
-    return <div ref={containerRef} className="w-full h-[250px] bg-[#0f1115]" />;
+    return <div ref={containerRef} className="w-full h-[400px] bg-[#0f1115]" />;
   }
 
-  const SVG_HEIGHT = 350;
+  const SVG_HEIGHT = 600;
 
   return (
     <div
       ref={containerRef}
-      className="w-full relative overflow-hidden h-[250px] bg-[#0f1115] flex items-start justify-center"
+      className="w-full relative overflow-hidden h-[600px] bg-[#0f1115] flex items-start justify-center"
     >
       <svg
         width={width}
@@ -63,30 +62,27 @@ export default function CurvedMarquee() {
         style={{ overflow: 'visible' }}
       >
         {/*
-          A gentler 150px drop across the visible screen (x=0 to x=width).
-          p1y - p0y = 7500 ensures exactly a 150px drop for our t-values.
+          A mathematically perfect 400px drop across the visible screen (x=0 to x=width).
+          By placing the ends at -2*width and 3*width, we maintain the parabola's shape.
+          The Y coordinates are constant because the vertical drop is independent of width.
         */}
         <path
           id="curve-path"
-          d={`M ${-width * 2} -3500 Q ${width / 2} 4000 ${width * 3} -3500`}
+          d={`M ${-width * 2} -9500 Q ${width / 2} 10500 ${width * 3} -9500`}
           fill="transparent"
         />
 
-        <text className="text-3xl md:text-4xl font-bold fill-white/80" style={{ letterSpacing: '0.05em' }}>
-          {/* Multiple text paths to guarantee unlimited looping visually without glitching edges */}
+        <text className="text-4xl md:text-5xl font-bold fill-white/80" style={{ letterSpacing: '0.05em' }}>
           <textPath href="#curve-path" startOffset={offset}>
-            {repeatedText}
-          </textPath>
-          <textPath href="#curve-path" startOffset={offset + textWidth}>
             {repeatedText}
           </textPath>
         </text>
 
         <text
           ref={measureRef}
-          className="text-3xl md:text-4xl font-bold opacity-0"
+          className="text-4xl md:text-5xl font-bold opacity-0"
         >
-          {repeatedText}
+          {baseText}
         </text>
       </svg>
     </div>
