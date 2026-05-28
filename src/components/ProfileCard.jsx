@@ -507,7 +507,7 @@ const ProfileCardComponent = ({
                     bottom: 'var(--ui-inset)',
                     left: 'var(--ui-inset)',
                     right: 'var(--ui-inset)',
-                    background: 'rgba(255, 255, 255, 0.1)',
+                    background: 'rgba(0, 0, 0, 0.4)',
                     borderRadius: 'calc(max(0px, var(--card-radius) - var(--ui-inset) + var(--ui-radius-bias)))',
                     padding: '12px 14px'
                   }}

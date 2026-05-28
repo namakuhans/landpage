@@ -39,9 +39,9 @@ const AboutSection = () => {
                viewport={{ once: true, margin: "-100px" }}
             >
                <ProfileCard
-                name="Javi A. Torres"
-                title="Motion Designer"
-                handle="javimotion"
+                name="A. Farhan M."
+                title="Mograph Editor"
+                handle="iHannsy"
                 status="Creative"
                 contactText="Contact Me"
                 avatarUrl="/profile-photo.jpg"
@@ -63,9 +63,9 @@ const AboutSection = () => {
                viewport={{ once: true, margin: "-100px" }}
             >
                <ProfileCard
-                name="Javi A. Torres"
-                title="Motion Designer"
-                handle="javimotion"
+                name="A. Farhan M."
+                title="Mograph Editor"
+                handle="iHannsy"
                 status="Creative"
                 contactText="Contact Me"
                 avatarUrl="/profile-photo.jpg"
