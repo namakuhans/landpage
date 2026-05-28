@@ -44,7 +44,7 @@ const AboutSection = () => {
                 handle="iHannsy"
                 status="Creative"
                 contactText="Contact Me"
-                avatarUrl="/profile-photo.jpg"
+                avatarUrl="/profile.png"
                 showUserInfo
                 enableTilt={true}
                 enableMobileTilt
@@ -68,7 +68,7 @@ const AboutSection = () => {
                 handle="iHannsy"
                 status="Creative"
                 contactText="Contact Me"
-                avatarUrl="/profile-photo.jpg"
+                avatarUrl="/profile.png"
                 showUserInfo
                 enableTilt={true}
                 enableMobileTilt
