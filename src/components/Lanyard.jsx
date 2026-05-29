@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
@@ -110,6 +109,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/immutability
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+    texture.needsUpdate = true;
   }, [texture]);
 
   useFrame((state, delta) => {
