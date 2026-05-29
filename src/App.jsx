@@ -42,24 +42,25 @@ function App() {
 
       <section className="relative w-full py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-[#0f1115] overflow-hidden flex flex-col md:flex-row items-center max-w-7xl mx-auto gap-8">
         <div className="w-full md:w-1/2 flex justify-center order-1 md:order-1 relative z-10">
-          <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-3xl overflow-hidden bg-[#1a1b26]">
             {/* Background Image Container */}
             <div
               className="absolute inset-0 bg-cover bg-center z-0"
-              style={{ backgroundImage: "url('/bg-lanyard.png')" }}
+              style={{
+                backgroundImage: "url('/bg-lanyard.png')",
+                transform: 'scale(1.02)',
+                filter: 'blur(2px)' // Reduced blur effect as requested in code review
+              }}
             ></div>
 
-            {/* Glassmorphism Blur Overlay (30% opacity equivalent / blur) */}
-            <div className="absolute inset-0 bg-black/30 backdrop-blur-3xl z-10"></div>
+            {/* Light Rays Effect from top */}
+            <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-white/10 to-transparent pointer-events-none mix-blend-overlay z-10" />
 
-            {/* Light rays effect from top */}
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/40 via-white/5 to-transparent h-2/3 z-20 mix-blend-overlay"></div>
-
-            {/* Top glare effect (kept for shine) */}
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/20 to-transparent h-1/4 rounded-t-2xl z-20"></div>
+            {/* Reduced glassmorphism/backdrop blur on top of background */}
+            <div className="absolute inset-0 backdrop-blur-[2px] pointer-events-none z-20" />
 
             <div className="relative w-full h-full z-30">
-              <Lanyard position={[0, -1, 10]} gravity={[0, -40, 0]} />
+              <Lanyard position={[0, 0, 10]} gravity={[0, -40, 0]} />
             </div>
           </div>
         </div>
