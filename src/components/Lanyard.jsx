@@ -81,9 +81,16 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(cardGLB);
   const texture = useTexture(lanyard);
+  const [isReady, setIsReady] = useState(false);
+  const [opacity, setOpacity] = useState(0);
   const [curve] = useState(
     () => {
-      const c = new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]);
+      const c = new THREE.CatmullRomCurve3([
+        new THREE.Vector3(0, 4, 0),
+        new THREE.Vector3(0, 3.5, 0),
+        new THREE.Vector3(0, 3, 0),
+        new THREE.Vector3(0, 2.5, 0)
+      ]);
       c.curveType = 'chordal';
       return c;
     }
@@ -113,6 +120,13 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
   }, [texture]);
 
   useFrame((state, delta) => {
+    if (!isReady && fixed.current) {
+      setIsReady(true);
+    }
+    if (isReady && opacity < 1) {
+      setOpacity(prev => Math.min(1, prev + delta * 2));
+    }
+
     if (dragged) {
       vec.set(state.pointer.x, state.pointer.y, 0.5).unproject(state.camera);
       dir.copy(vec).sub(state.camera.position).normalize();
@@ -122,10 +136,13 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
     }
     if (fixed.current) {
       [j1, j2].forEach(ref => {
-        if (!ref.current.lerped) ref.current.lerped = new THREE.Vector3().copy(ref.current.translation());
-        const clampedDistance = Math.max(0.1, Math.min(1, ref.current.lerped.distanceTo(ref.current.translation())));
+        if (!ref.current.lerped) {
+          ref.current.lerped = new THREE.Vector3().copy(ref.current.translation());
+        }
+        const translation = ref.current.translation();
+        const clampedDistance = Math.max(0.1, Math.min(1, ref.current.lerped.distanceTo(translation)));
         ref.current.lerped.lerp(
-          ref.current.translation(),
+          translation,
           delta * (minSpeed + clampedDistance * (maxSpeed - minSpeed))
         );
       });
@@ -147,16 +164,16 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
     <>
       <group position={[0, 4, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
-        <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
+        <RigidBody position={[0, -0.5, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
-        <RigidBody position={[1, 0, 0]} ref={j2} {...segmentProps}>
+        <RigidBody position={[0, -1, 0]} ref={j2} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
-        <RigidBody position={[1.5, 0, 0]} ref={j3} {...segmentProps}>
+        <RigidBody position={[0, -1.5, 0]} ref={j3} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
-        <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
+        <RigidBody position={[0, -2, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
             scale={2.25}
@@ -189,6 +206,8 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
         <meshLineMaterial
           color="white"
           depthTest={false}
+          transparent={true}
+          opacity={opacity}
           resolution={isMobile ? [1000, 2000] : [1000, 1000]}
           useMap
           map={texture}
