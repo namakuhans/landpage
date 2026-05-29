@@ -46,6 +46,7 @@ const AboutSection = () => {
                 contactText="Contact Me"
                 avatarUrl="/profile.png"
                 showUserInfo
+                iconUrl="/iconpattern.png"
                 enableTilt={true}
                 enableMobileTilt
                 behindGlowColor="rgba(125, 190, 255, 0.67)"
@@ -72,6 +73,7 @@ const AboutSection = () => {
                 contactText="Contact Me"
                 avatarUrl="/profile.png"
                 showUserInfo
+                iconUrl="/iconpattern.png"
                 enableTilt={true}
                 enableMobileTilt
                 behindGlowColor="rgba(125, 190, 255, 0.67)"
