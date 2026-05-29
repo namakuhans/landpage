@@ -72,7 +72,7 @@ function App() {
              viewport={{ once: true, margin: "-100px" }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-              Interactive 3D Asset
+              GFX Lanyard
             </h2>
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-6 font-light">
               This interactive lanyard experience is built entirely using <span className="text-[#3b82f6] font-semibold drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Three.js</span> and React Three Fiber.
