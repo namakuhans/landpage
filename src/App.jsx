@@ -42,12 +42,24 @@ function App() {
 
       <section className="relative w-full py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-[#0f1115] overflow-hidden flex flex-col md:flex-row items-center max-w-7xl mx-auto gap-8">
         <div className="w-full md:w-1/2 flex justify-center order-1 md:order-1 relative z-10">
-          <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-cover bg-center" style={{ backgroundImage: "url('/bg-lanyard.png')" }}>
-            {/* Top glare effect */}
+          <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+            {/* Background Image Container */}
+            <div
+              className="absolute inset-0 bg-cover bg-center z-0"
+              style={{ backgroundImage: "url('/bg-lanyard.png')" }}
+            ></div>
+
+            {/* Glassmorphism Blur Overlay (30% opacity equivalent / blur) */}
+            <div className="absolute inset-0 bg-black/30 backdrop-blur-3xl z-10"></div>
+
+            {/* Light rays effect from top */}
+            <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/40 via-white/5 to-transparent h-2/3 z-20 mix-blend-overlay"></div>
+
+            {/* Top glare effect (kept for shine) */}
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/20 to-transparent h-1/4 rounded-t-2xl z-20"></div>
 
-            <div className="relative w-full h-full z-10">
-              <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
+            <div className="relative w-full h-full z-30">
+              <Lanyard position={[0, -1, 10]} gravity={[0, -40, 0]} />
             </div>
           </div>
         </div>
