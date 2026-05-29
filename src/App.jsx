@@ -47,7 +47,7 @@ function App() {
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/20 to-transparent h-1/4 rounded-t-2xl z-20"></div>
 
             <div className="relative w-full h-full z-10">
-              <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+              <Lanyard position={[0, 0, 12]} gravity={[0, -40, 0]} />
             </div>
           </div>
         </div>
