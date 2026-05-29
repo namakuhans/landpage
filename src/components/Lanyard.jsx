@@ -82,7 +82,6 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
   const { nodes, materials } = useGLTF(cardGLB);
   const texture = useTexture(lanyard);
   const [isReady, setIsReady] = useState(false);
-  const [opacity, setOpacity] = useState(0);
   const [curve] = useState(
     () => {
       const c = new THREE.CatmullRomCurve3([
@@ -120,11 +119,13 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
   }, [texture]);
 
   useFrame((state, delta) => {
-    if (!isReady && fixed.current) {
+    if (!isReady && fixed.current && texture) {
       setIsReady(true);
     }
-    if (isReady && opacity < 1) {
-      setOpacity(prev => Math.min(1, prev + delta * 2));
+
+    // Fade in animation for the band directly mutating material
+    if (isReady && band.current?.material) {
+      band.current.material.opacity = Math.min(1, band.current.material.opacity + delta * 2);
     }
 
     if (dragged) {
@@ -207,7 +208,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }) {
           color="white"
           depthTest={false}
           transparent={true}
-          opacity={opacity}
+          opacity={0}
           resolution={isMobile ? [1000, 2000] : [1000, 1000]}
           useMap
           map={texture}
