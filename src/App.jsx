@@ -48,6 +48,9 @@ function App() {
         interactive
       />
 
+      {/* Spacer between CurvedLoop and Lanyard Section */}
+      <div className="h-[384px] md:h-[512px] lg:h-[640px] w-full"></div>
+
       <section className="relative w-full py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-[#0f1115] overflow-hidden flex flex-col md:flex-row items-center max-w-7xl mx-auto gap-8">
         <div className="w-full md:w-1/2 flex justify-center order-1 md:order-1 relative z-10">
           <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-3xl overflow-hidden bg-[#1a1b26]">
