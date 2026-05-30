@@ -40,6 +40,14 @@ function App() {
 
       <AboutSection />
 
+      <CurvedLoop
+        marqueeText="BRINGING VISUAL TO LIVE ✦ DYNAMIC DESIGNS, SEAMLESS MOTION ✦ ART THAT SPEAKS ✦"
+        speed={5}
+        curveAmount={250}
+        direction="left"
+        interactive
+      />
+
       <section className="relative w-full py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-[#0f1115] overflow-hidden flex flex-col md:flex-row items-center max-w-7xl mx-auto gap-8">
         <div className="w-full md:w-1/2 flex justify-center order-1 md:order-1 relative z-10">
           <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-3xl overflow-hidden bg-[#1a1b26]">
@@ -72,7 +80,7 @@ function App() {
              viewport={{ once: true, margin: "-100px" }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-              GFX Lanyard
+              Interactive 3D Asset
             </h2>
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-6 font-light">
               This interactive lanyard experience is built entirely using <span className="text-[#3b82f6] font-semibold drop-shadow-[0_0_8px_rgba(59,130,246,0.8)]">Three.js</span> and React Three Fiber.
@@ -83,14 +91,6 @@ function App() {
           </motion.div>
         </div>
       </section>
-
-      <CurvedLoop
-        marqueeText="BRINGING VISUAL TO LIVE ✦ DYNAMIC DESIGNS, SEAMLESS MOTION ✦ ART THAT SPEAKS ✦"
-        speed={5}
-        curveAmount={250}
-        direction="left"
-        interactive
-      />
 
       {/* Spacer between About and Gallery */}
       <div className="h-[384px] md:h-[512px] lg:h-[640px] w-full"></div>
