@@ -1,35 +1,5 @@
 import { motion } from 'framer-motion';
-
-const projects = [
-  {
-    id: 1,
-    title: 'Neon Cyberpunk City',
-    category: 'Motion Graphics',
-    image: 'https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=2070&auto=format&fit=crop',
-    span: 'col-span-1 md:col-span-2 row-span-2'
-  },
-  {
-    id: 2,
-    title: 'Abstract Fluid Simulation',
-    category: 'VFX / 3D',
-    image: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop',
-    span: 'col-span-1 row-span-1'
-  },
-  {
-    id: 3,
-    title: 'Kinetic Typography',
-    category: 'Motion Graphics',
-    image: 'https://images.unsplash.com/photo-1557672172-298e090bd0f1?q=80&w=2000&auto=format&fit=crop',
-    span: 'col-span-1 row-span-1'
-  },
-  {
-    id: 4,
-    title: 'Product Visualization',
-    category: '3D Render',
-    image: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1974&auto=format&fit=crop',
-    span: 'col-span-1 md:col-span-2 row-span-1'
-  }
-];
+import { Hammer } from 'lucide-react';
 
 function GallerySection() {
   return (
@@ -55,38 +25,21 @@ function GallerySection() {
         </motion.p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`relative group rounded-3xl overflow-hidden glass-panel shadow-[var(--shadow-skeuo)] ${project.span}`}
-          >
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10"></div>
-
-            <img
-              src={project.image}
-              alt={project.title}
-              className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
-            />
-
-            <div className="absolute inset-0 z-20 flex flex-col justify-end p-8 opacity-90 group-hover:opacity-100 transition-opacity">
-              <span className="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">
-                {project.category}
-              </span>
-              <h3 className="text-2xl font-bold text-white translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                {project.title}
-              </h3>
-            </div>
-
-            {/* Skeuomorphic inner border highlight */}
-            <div className="absolute inset-0 rounded-3xl border border-white/10 z-30 pointer-events-none"></div>
-          </motion.div>
-        ))}
-      </div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6 }}
+        className="w-full h-[400px] rounded-3xl bg-[#181b21] shadow-[var(--shadow-skeuo-inner)] border border-white/5 flex flex-col items-center justify-center text-center p-8"
+      >
+        <Hammer className="w-16 h-16 text-gray-500 mb-6 animate-pulse" />
+        <h3 className="text-3xl font-bold text-gray-300 mb-2 tracking-widest uppercase" style={{ fontFamily: "'Tusker Grotesk', 'Anton', sans-serif" }}>
+          Coming Soon
+        </h3>
+        <p className="text-gray-500 text-lg max-w-md">
+          This section is currently under construction. Please check back later for new updates and projects.
+        </p>
+      </motion.div>
     </section>
   );
 }
